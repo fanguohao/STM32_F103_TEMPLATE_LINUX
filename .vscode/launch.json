@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug-stlink",
+            "cwd": "${workspaceRoot}/",
+            "executable": "${workspaceFolder}/build/${workspaceFolderBasename}.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd", //要选择的GDB server
+            "device": "STM32F407ZGT6", //
+            "interface": "swd",
+            "configFiles": [
+                "/usr/local/share/openocd/scripts/interface/stlink-v2.cfg",
+                "/usr/local/share/openocd/scripts/target/stm32f1x.cfg",
+            ],
+            "runToEntryPoint": "main",
+            "showDevDebugTimestamps": true,
+            // "svdFile": "${workspaceRoot}/STM32F103.svd",
+            "preLaunchTask": "build",
+            "postDebugTask": "build",
+        }
+    ],
+}

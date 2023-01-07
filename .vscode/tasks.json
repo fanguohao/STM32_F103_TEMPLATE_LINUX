@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "options": {
+        "cwd": "${workspaceRoot}"
+      },
+      "command": "make",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Download",
+      "type": "shell",
+      "options": {
+        "cwd": "${workspaceRoot}"
+      },
+      "command": "make download",
+      "group": "build"
+    },
+    {
+      "label": "Make Download",
+      "type": "shell",
+      "options": {
+        "cwd": "${workspaceRoot}"
+      },
+      "command": "make && make download",
+      "group": "build"
+    },
+  ]
+}
